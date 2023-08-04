@@ -19,11 +19,5 @@ func Square(number int) (uint64, error) {
 
 // Total returns the total number of grains in the chessboard.
 func Total() uint64 {
-	var result uint64 = 0
-
-	for i := 0; i < 64; i++ {
-		result += uint64(math.Pow(2, float64(i)))
-	}
-
-	return result
+	return 1<<64 - 1
 }
